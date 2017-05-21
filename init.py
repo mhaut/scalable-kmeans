@@ -60,10 +60,8 @@ def _k_para_init(X, n_clusters, x_squared_norms, random_state, l=4, r=5):
         candidate_ids = np.searchsorted(dist_sq.cumsum(), rand_vals)
 
         # Compute distances to new centers
-		candidate_ids < n_samples
-		
-		
-		distance_to_candidates = euclidean_distances(X[candidate_ids], X, Y_norm_squared=x_squared_norms, squared=True)
+	candidate_ids < n_samples
+	distance_to_candidates = euclidean_distances(X[candidate_ids], X, Y_norm_squared=x_squared_norms, squared=True)
 
         # Compute potential when including the new centers
         distances = np.min(distance_to_candidates, axis=0)
