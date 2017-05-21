@@ -38,10 +38,8 @@ def _k_para_init(X, n_clusters, x_squared_norms, random_state, l=4, r=5):
         center = X[center_id, np.newaxis]
 
     # Initialize list of closest distances and calculate current potential
-    dist_sq = euclidean_distances(center, 
-								  X, 
-								  Y_norm_squared=x_squared_norms,
-								  squared=True)
+    dist_sq = euclidean_distances(center, X, \
+				  Y_norm_squared=x_squared_norms, squared=True)
     cost = dist_sq.sum()
 
     center_ids = [center_id]
